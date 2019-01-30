@@ -1,0 +1,228 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CnxCenterpoint</title>
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="config.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page" ng-app="myApp" ng-controller="myCtrl">
+        <div data-role="header">
+            <a href="#" ng-click="back()" style="margin-top: 5px" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+            <p style="text-align:center;">เพิ่มสินค้า</p>
+            <a href="#" ng-click="Save()" style="margin-top: 5px" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">บันทึก</a>
+        </div>
+
+        <div data-role="content">
+            <div class="ui-grid-a">
+
+                <div wight=100%>
+                    <div class="ui-block-a-30%" style="text-align:left;"><a class="ui-corner-all"><img src="img/1.jpg"
+                                width="100px" height="100px"></a>
+                        <a><img src="img/1.jpg" width="100px" height="100px"></a>
+                        <a><img src="img/1.jpg" width="100px" height="100px"></a>
+
+                        <br>
+                        <div text="text-align:center;"><a href="#">เพิ่มรูปภาพ</a></div>
+                    </div>
+
+                    <form>
+                        <input type="hidden" ng-model="product.Id">
+                        <div class="ui-field-contain">
+                            <label for="text-12">ชื่อสินค้า:</label>
+                            <input type="text" name="text-12" ng-model="product.Product_name" id="text-12" value="">
+                        </div>
+                        <div class="ui-field-contain">
+                            <label for="text-13">คำอธิบาย:</label>
+                            <input type="text" data-clear-btn="true" ng-model="product.Product_explanation" name="text-13"
+                                id="text-13" value="">
+                        </div>
+                        <div class="ui-field-contain">
+                            <div class="ui-field-contain">
+                                <label for="text-12">ขนาด:</label>
+                                <input type="text" name="text-12" ng-model="product.Product_size" id="text-12" value="">
+                            </div>
+
+                            <div class="ui-field-contain">
+                                <label for="text-12">น้ำหนัก:</label>
+                                <input type="text" name="text-12" ng-model="product.Product_weight" id="text-12" value="">
+                            </div>
+
+                            <div class="ui-field-contain">
+                                <label for="text-12">อื่นๆ:</label>
+                                <input type="text" name="text-12" ng-model="product.Product_other" id="text-12" value="">
+                            </div>
+
+                            <div class="ui-field-contain">
+                                <label for="text-12">ราคา:</label>
+                                <input type="text" name="text-12" ng-model="product.Product_price" id="text-12" value="">
+                            </div>
+
+                            <ui>
+                                <div class="ui-field-contain">
+                                    <label for="text-13">หมวดสินค้า:</label>
+                                    <select name="select-native-fc" ng-model="product.Product_group" id="select-native-fc">
+                                        <option value="อาหาร">อาหาร</option>
+                                        <option value="เครื่องดื่ม">เครื่องดื่ม</option>
+                                        <option value="แฟชั่น">แฟชั่น</option>
+                                        <option value="ของใช้และของตกแต่งภายใน">ของใช้และของตกแต่งภายใน</option>
+                                        <option value="เกมส์">เกมส์</option>
+                                        <option value="สุขภาพและความงาม">สุขภาพและความงาม</option>
+                                    </select>
+                                </div>
+                                <ui>
+                                    <div class="ui-field-contain">
+                                        <label for="text-13">ประเภทสินค้า:</label>
+                                        <select name="select-native-fc" ng-model="product.Product_type" id="select-native-fc">
+                                            <option value="น้ำพริกสำเร็จรูป">น้ำพริกสำเร็จรูป</option>
+                                            <option value="ขนมอบกรอบ">ขนมอบกรอบ</option>
+                                            <option value="ธัญพืช">ธัญพืช</option>
+                                            <option value="เบเกอรี่"> เบเกอรี่</option>
+                                            <option value="กาแฟ">กาแฟ</option>
+                                            <option value="น้ำผลไม้"> น้ำผลไม้</option>
+                                            <option value="น้ำแร่"> น้ำแร่</option>
+                                            <option value="สุราขาวกลั่น"> สุราขาวกลั่น</option>
+                                        </select>
+                                    </div>
+                                    <div class="ui-field-contain">
+                                        <label for="text-13">หน่วยนับ:</label>
+                                        <select name="select-native-fc" ng-model="product.Product_unit" id="select-native-fc">
+                                            <option value="กระป๋อง">กระป๋อง</option>
+                                            <option value="กระปุก">กระปุก</option>
+                                            <option value="อัน">อัน</option>
+                                            <option value="กล่อง">กล่อง</option>
+                                            <option value="ก้อน">ก้อน</option>
+                                            <option value="กิโลกรัม">กิโลกรัม</option>
+                                        </select>
+                                    </div>
+
+
+
+                                    <div class="ui-field-contain">
+                                        <label for="text-12">Keywords:</label>
+                                        <input type="text" name="text-12" ng-model="product.Keyword" id="text-12" value="">
+                                    </div>
+                                    <div class="ui-field-contain">
+                                        <label for="text-12">Title:</label>
+                                        <input type="text" name="text-12" ng-model="product.Title" id="text-12" value="">
+                                    </div>
+
+                                    <div class="ui-field-contain">
+                                        <label for="text-12">Description:</label>
+                                        <input type="text" name="text-12" ng-model="product.Description" id="text-12"
+                                            value="">
+                                    </div>
+
+
+                                    <div class="ui-field-contain">
+                                        <label for="text-12">Website:</label>
+                                        <input type="text" name="text-12" ng-model="product.Website" id="text-12" value="">
+                                    </div>
+
+
+                        </div>
+                    </form>
+
+                </div>
+
+
+
+
+            </div><!-- /navbar -->
+
+
+
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home" data-ajax="false">หน้าแรก</a></li>
+                        <li><a href="https://thai.cnxcenterpoint.com/" data-icon="eye" data-ajax="false">ชมเว็บไชต์</a></li>
+                        <li><a href="page-help.html" data-icon="info" data-ajax="false">ช่วยเหลือ</a></li>
+                        <li><a href="#" data-icon="user" data-ajax="false" class="ui-btn-active">บัญชีของฉัน</a></li>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+        </div><!-- /page popup -->
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http, $window) {
+
+                $(document).ready(function () {
+                    var url = new URL(window.location.href);
+                    var id = url.searchParams.get("id");
+                    var get = $http({
+                        method: "GET",
+                        url: ip_address + 'Products/Details/' + id,
+                        dataType: 'json',
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    }).then(function successCallback(response) {
+                        if (response.data != "null") {
+                            $scope.product = response.data;
+                        }
+                    }, function errorCallback(response) {
+                        alert("Error");
+                    });
+                });
+                $scope.back = function () {
+                    window.location.href = "page-editProduct.html";
+                }
+                $scope.Save = function () {
+                    var Id = $scope.product.Id ? $scope.product.Id : 0;
+                    var Product_name = $scope.product.Product_name ? $scope.product.Product_name : " ";
+                    var Product_price = $scope.product.Product_price ? $scope.product.Product_price : 0;
+                    var Product_size = $scope.product.Product_size ? $scope.product.Product_size : 0;
+                    var Product_other = $scope.product.Product_other ? $scope.product.Product_other : " ";
+                    var Product_unit = $scope.product.Product_unit ? $scope.product.Product_unit : " ";
+                    var Title = $scope.product.Title ? $scope.Title : " ";
+                    var Product_explanation = $scope.product.Product_explanation ? $scope.product.Product_explanation :
+                        " ";
+                    var Keyword = $scope.product.Keyword ? $scope.product.Keyword : " ";
+                    var Description = $scope.product.Description ? $scope.product.Description : " ";
+                    var Website = $scope.product.Website ? $scope.product.Website : " ";
+                    var Product_group = $scope.product.Product_group ? $scope.product.Product_group : " ";
+                    var Product_type = $scope.product.Product_type ? $scope.product.Product_type : " ";
+
+                    var post = $http({
+                        method: "GET",
+                        url: ip_address + "Products/Create?name=" + Product_name +
+                            "&price=" + Product_price +
+                            "&size=" + Product_size +
+                            "&other=" + Product_other +
+                            "&unit=" + Product_unit +
+                            "&title=" + Title +
+                            "&explanation=" + Product_explanation +
+                            "&keyword=" + Keyword +
+                            "&description=" + Description +
+                            "&website=" + Website +
+                            "&group=" + Product_group +
+                            "&type=" + Product_type+
+                            "&id=" + Id
+                    }).then(function successCallback(response) {
+                        alert("Save Success");
+                        window.location.href = "page-User.html";
+                    }, function errorCallback(response) {
+                        alert("Error");
+                        window.location.href = "page-User.html";
+                    });
+                }
+
+                function checkNull(value) {
+                    if (!value) {
+                        return " ";
+                    }
+                }
+            });
+        </script>
+</body>
+
+</html>

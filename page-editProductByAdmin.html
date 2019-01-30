@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CnxCenterpoint</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+    
+    <div data-role="page">
+            <div data-role="header">
+                <a href="page-User.html" style="margin-top: 5px" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+                <p style="text-align:center;">เพิ่มสินค้า</p>
+                <a href="#" style="margin-top: 5px" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">บันทึก</a>
+            </div>
+
+            <div data-role="content">
+                    <div class="ui-grid-a">
+                        
+                            <div wight=100%>
+                                <div class="ui-block-a-30%" style="text-align:left;"><a class="ui-corner-all"><img src="img/1.jpg" width="100px" height="100px"></a>
+                                    <a><img src="img/1.jpg" width="100px" height="100px"></a>
+                                    <a><img src="img/1.jpg" width="100px" height="100px"></a>
+                                  
+                                    <br><div text="text-align:center;"><a href="#">เพิ่มรูปภาพ</a></div>
+                                </div>
+                                
+                                <form>
+                                    <div class="ui-field-contain">
+                                        <label for="text-12">ชื่อสินค้า:</label>
+                                        <input type="text" name="text-12" id="text-12" value="">
+                                    </div>
+                                    <ui><div class="ui-field-contain">
+                                        <label for="text-13">ชื่อร้าน:</label>
+                                        <select name="select-native-fc" id="select-native-fc">
+                                            <option value="">ดึงDBรชื่อร้านทั้งหมดในระบบ</option>
+                                            <option value="">...</option>
+                                            <option value="">...</option>
+                                            <option value="">...</option>
+                                            <option value="">...</option>
+                                            <option value="">...</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="ui-field-contain">
+                                        <label for="text-13">คำอธิบาย:</label>
+                                        <input type="text" data-clear-btn="true" name="text-13" id="text-13" value="">
+                                    </div>
+                                    <div class="ui-field-contain">
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">ขนาด:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">น้ำหนัก:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+                                            
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">อื่นๆ:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">ราคา:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+
+                                            <ui><div class="ui-field-contain">
+                                                <label for="text-13">หมวดสินค้า:</label>
+                                                <select name="select-native-fc" id="select-native-fc">
+                                                    <option value="">อาหาร</option>
+                                                    <option value="">เครื่องดื่ม</option>
+                                                    <option value="">แฟชั่น</option>
+                                                    <option value="">ของใช้และของตกแต่งภายใน</option>
+                                                    <option value="">เกมส์</option>
+                                                    <option value="">สุขภาพและความงาม</option>
+                                                </select>
+                                            </div>
+                                            <ui><div class="ui-field-contain">
+                                                    <label for="text-13">ประเภทสินค้า:</label>
+                                                    <select name="select-native-fc" id="select-native-fc">
+                                                        <option value="small">ดึงDBแบ่งตามหมวดสินค้า</option>
+                                                        <option value="medium"></option>
+                                                        <option value="large"></option>
+                                                    </select>
+                                                </div>
+                                            <div class="ui-field-contain">
+                                                    <label for="text-13">หน่วยนับ:</label>
+                                                    <select name="select-native-fc" id="select-native-fc">
+                                                        <option value="small">ดึงDBแบ่งตามประเภทสินค้า</option>
+                                                        <option value="medium"></option>
+                                                        <option value="large"></option>
+                                                    </select>
+                                                </div>
+                                                
+                                                
+
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">Keywords:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">Title:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+                                            
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">Description:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+
+
+                                            <div class="ui-field-contain">
+                                                <label for="text-12">Website:</label>
+                                                <input type="text" name="text-12" id="text-12" value="">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </form>
+                            
+                            </div>   
+                                
+
+                           
+              
+            </div><!-- /navbar -->
+
+
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="index.html" data-icon="home" data-ajax="false">หน้าแรก</a></li>
+                    <li><a href="https://thai.cnxcenterpoint.com/" data-icon="eye" data-ajax="false">ชมเว็บไชต์</a></li>
+                    <li><a href="page-help.html" data-icon="info" data-ajax="false">ช่วยเหลือ</a></li>
+                    <li><a href="#" data-icon="user" data-ajax="false" class="ui-btn-active">บัญชีของฉัน</a></li>
+                </ul>
+            </div>
+        </div><!-- /footer -->
+    </div><!-- /page popup -->
+
+</body>
+</html>
